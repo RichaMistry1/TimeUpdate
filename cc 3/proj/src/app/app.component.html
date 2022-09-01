@@ -1,0 +1,16 @@
+<div class="center">
+<form action="" method="post">
+  <h1 class="title">Time Clock App</h1>
+  <h2 class="solid">New User Registration</h2>
+  <p>Enter New ID</p>
+  <input type="text" name="rg" id="rg" [(ngModel)]="register_input">
+  <input type="button" value="Register" (click)="registerUser()">
+  <h2 class="solid">Existing User? Enter Your Id Here</h2>
+  <input type="text" name="inp" id="inp" [(ngModel)]="input_data">
+  <input type="button" value="submit" (click)="func1()">
+</form>
+
+</div>
+<app-nn *ngIf="flag" [stringObject] = "data" ></app-nn>
+
+

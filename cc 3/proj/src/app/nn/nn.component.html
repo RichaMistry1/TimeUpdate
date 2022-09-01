@@ -1,0 +1,38 @@
+
+<div class="center">
+<form method="post">   
+    <br>
+            
+            <input type="button" class="buttonBox"  value="Shift Start" (click)="onStart()">
+            <div *ngIf= "stringObject.startTiming === null ; then thenBlock else elseBlock"></div>
+            <ng-template #elseBlock>{{stringObject.startTiming}}</ng-template>
+            <ng-template #thenBlock>{{"NULL"}}</ng-template><br><br>
+        
+            <input type="button" class="buttonBox"  value="Shift End" (click)="onEnd()">
+            <div *ngIf= "stringObject.endTiming === null ; then thenEnd else elseEnd"></div>
+            <ng-template #elseEnd>{{stringObject.endTiming}}</ng-template>
+            <ng-template #thenEnd>{{"NULL"}}</ng-template><br><br>
+        
+            <input type="button" class="buttonBox" value="Break Start" (click)="onBreakStart()">
+            <div *ngIf= "stringObject.breakStart=== null ; then thenBreakStart else elseBreakStart"></div>
+            <ng-template #elseBreakStart>{{stringObject.breakStart}}</ng-template>
+            <ng-template #thenBreakStart>{{"NULL"}}</ng-template><br><br>
+        
+            <input type="button" class="buttonBox" value="Break End" (click)="onBreakEnd()">
+            <div *ngIf= "stringObject.breakEnd=== null ; then thenBreakEnd else elseBreakEnd"></div>
+            <ng-template #elseBreakEnd>{{stringObject.breakEnd}}</ng-template>
+            <ng-template #thenBreakEnd>{{"NULL"}}</ng-template><br><br>
+        
+            <input type="button" class="buttonBox" value="Lunch Start" (click)="onLunchStart()">
+            <div *ngIf= "stringObject.lunchStart === null ; then thenLunchStart else elseLunchStart"></div>
+            <ng-template #elseLunchStart>{{stringObject.lunchStart}}</ng-template>
+            <ng-template #thenLunchStart>{{"NULL"}}</ng-template><br><br>
+        
+            <input type="button" class="buttonBox" value="Lunch End" (click)="onLunchEnd()">
+            <div *ngIf= "stringObject.lunchEnd === null ; then thenLunchEnd else elseLunchEnd"></div>
+            <ng-template #elseLunchEnd>{{stringObject.lunchEnd}}</ng-template>
+            <ng-template #thenLunchEnd>{{"NULL"}}</ng-template><br><br>
+    
+</form>
+</div>
+
